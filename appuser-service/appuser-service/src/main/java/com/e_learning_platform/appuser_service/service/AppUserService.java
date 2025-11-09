@@ -2,15 +2,15 @@ package com.e_learning_platform.appuser_service.service;
 
 import com.e_learning_platform.appuser_service.dto.AppUserDTO;
 import com.e_learning_platform.appuser_service.entity.AppUser;
-import com.e_learning_platform.appuser_service.entity.Role;
 import com.e_learning_platform.appuser_service.repository.AppUserRepo;
-import lombok.Builder;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -33,5 +33,13 @@ public class AppUserService {
 
     public List<AppUser> fetchAllUsers() {
         return appUserRepo.findAll();
+    }
+
+    public void deleteUserById(Long userId) {
+        Optional<AppUser> user = appUserRepo.findById(userId);
+        if (user.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User with id " + userId + " does not exist!");
+        }
+        appUserRepo.deleteById(userId);
     }
 }

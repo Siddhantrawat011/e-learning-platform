@@ -1,6 +1,5 @@
 package com.e_learning_platform.appuser_service.jwt;
 
-import com.e_learning_platform.appuser_service.service.CustomUserService;
 import com.e_learning_platform.appuser_service.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
