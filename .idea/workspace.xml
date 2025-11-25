@@ -5,68 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6775c7d-df09-47f7-afa1-a926e370643d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/e-learning-platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/e-learning-platform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/AppuserServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/controller/AdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/controller/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/controller/ProtectedController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/dto/AppUserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/dto/LoginRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/dto/LoginResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/entity/AppUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/entity/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/jwt/JwtFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/repository/AppUserRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/service/AppUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/service/CustomUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/service/JwtService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/java/com/e_learning_platform/appuser_service/service/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appuser-service/appuser-service/src/test/java/com/e_learning_platform/appuser_service/AppuserServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/e_learning_platform/course_service/CourseServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/test/java/com/e_learning_platform/course_service/CourseServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/service-registry/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/service-registry/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/service-registry/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/service-registry/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/service-registry/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/service-registry/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/service-registry/src/main/java/com/e_learning_platform/service_registry/ServiceRegistryApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/service-registry/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-registry/service-registry/src/test/java/com/e_learning_platform/service_registry/ServiceRegistryApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="35SNZuRRKIL0NBbrISaAwGbGqNb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -80,7 +44,9 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/LENOVO/Downloads/e-learning-platform",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
   <component name="TaskManager">

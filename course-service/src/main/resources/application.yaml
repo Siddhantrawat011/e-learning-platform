@@ -1,9 +1,32 @@
+server:
+  port: 8082
+
 spring:
   application:
     name: course-service
 
-server:
-  port: 8082
+  datasource:
+    url: jdbc:postgresql://localhost:5432/course_db
+    username: postgres
+    password: admin123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    sql:
+      init:
+        mode: always
+
+logging:
+  level:
+    org.springframework: INFO
+    org.hibernate.SQL: DEBUG
 
 eureka:
   client:
@@ -11,3 +34,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
+
+application:
+  security:
+    jwt:
+      secret-key: myjwtsecretkeyforbackendproject123456789
+      expiration: 86400000
