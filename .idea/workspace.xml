@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6775c7d-df09-47f7-afa1-a926e370643d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/repository/CourseRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/repository/CourseRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/service/CustomUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/service/CustomUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/controller/AdminController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

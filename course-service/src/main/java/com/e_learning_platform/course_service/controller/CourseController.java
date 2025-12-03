@@ -5,23 +5,19 @@ import com.e_learning_platform.course_service.service.CourseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/admin")
+@RequestMapping("/api/courses")
 @RequiredArgsConstructor
 public class CourseController {
+
     private final CourseService courseService;
 
-    @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/create")
-    public ResponseEntity<Course> createCourse(@RequestBody Course course){
-        Course createdCourse = courseService.createCourse(course);
-        return ResponseEntity.ok(createdCourse);
-    }
-
-    @PreAuthorize("hasRole('ADMIN')")    @GetMapping
+    @GetMapping
     public ResponseEntity<Page<Course>> getAllCourses(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "5") int size,
