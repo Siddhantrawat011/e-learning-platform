@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6775c7d-df09-47f7-afa1-a926e370643d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appuser-service/src/main/java/com/e_learning_platform/appuser_service/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appuser-service/src/main/java/com/e_learning_platform/appuser_service/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appuser-service/src/main/java/com/e_learning_platform/appuser_service/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appuser-service/src/main/java/com/e_learning_platform/appuser_service/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appuser-service/src/main/java/com/e_learning_platform/appuser_service/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/appuser-service/src/main/java/com/e_learning_platform/appuser_service/service/AppUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/jwt/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/jwt/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/e_learning_platform/course_service/service/CourseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,19 +43,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AppuserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CourseServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ServiceRegistryApplication.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Downloads/e-learning-platform&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AppuserServiceApplication.executor": "Run",
+    "Application.CourseServiceApplication.executor": "Run",
+    "Application.EnrolmentServiceApplication.executor": "Run",
+    "Application.ServiceRegistryApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/LENOVO/Downloads/e-learning-platform",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c6775c7d-df09-47f7-afa1-a926e370643d" name="Changes" comment="" />

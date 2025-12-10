@@ -1,0 +1,51 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: enrolment-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/enrolment_db
+    username: postgres
+    password: admin123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    sql:
+      init:
+        mode: always
+
+logging:
+  level:
+    org.springframework: INFO
+    org.hibernate.SQL: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+application:
+  security:
+    jwt:
+      secret-key: myjwtsecretkeyforbackendproject123456789
+      expiration: 86400000
+
+user:
+  service:
+    url: http://APPUSER-SERVICE
+
+course:
+  service:
+    url: http://COURSE-SERVICE
+

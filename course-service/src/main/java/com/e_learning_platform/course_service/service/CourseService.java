@@ -27,4 +27,8 @@ public class CourseService{
         System.out.println("Pagination Object: " + pageable);
         return courseRepo.findAll(pageable);
     }
+
+    public Course getCourseById(Long id) {
+        return courseRepo.findById(id).orElseThrow();
+    }
 }

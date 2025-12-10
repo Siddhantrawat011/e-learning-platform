@@ -5,10 +5,7 @@ import com.e_learning_platform.course_service.service.CourseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/courses")
@@ -25,5 +22,12 @@ public class CourseController {
             @RequestParam(defaultValue = "asc") String direction
     ){
         return ResponseEntity.ok(courseService.getAllCourses(page, size, sortBy, direction));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Course> getCourseById(@PathVariable Long id){
+        System.out.println("Received GET /api/courses/{id}, id=" + id);
+        Course course = courseService.getCourseById(id);
+        return ResponseEntity.ok(course);
     }
 }

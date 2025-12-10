@@ -1,10 +1,13 @@
 package com.e_learning_platform.appuser_service.controller;
 
+import com.e_learning_platform.appuser_service.entity.AppUser;
 import com.e_learning_platform.appuser_service.service.AppUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/admin")
@@ -24,5 +27,11 @@ public class AdminController {
     public ResponseEntity<String> deleteUser(@PathVariable long userId){
         appUserService.deleteUserById(userId);
         return ResponseEntity.ok("User with id " + userId + " deleted successfully!");
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping
+    public ResponseEntity<List<AppUser>> getAllUsers(){
+        return ResponseEntity.ok(appUserService.fetchAllUsers());
     }
 }

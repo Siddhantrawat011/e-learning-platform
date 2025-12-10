@@ -42,4 +42,8 @@ public class AppUserService {
         }
         appUserRepo.deleteById(userId);
     }
+
+    public AppUser getUserById(Long id) {
+        return appUserRepo.findById(id).orElseThrow();
+    }
 }
