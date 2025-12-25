@@ -31,6 +31,9 @@ public class Enrolment {
     @Column
     private String status;
 
+    @Column
+    private Double progressPercentage;
+
     @PrePersist
     protected void onCreate() {
         enrolledAt = LocalDateTime.now();

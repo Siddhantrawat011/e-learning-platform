@@ -1,6 +1,7 @@
 package com.e_learning_platform.enrolment_service.service;
 
 import com.e_learning_platform.enrolment_service.dto.CourseDto;
+import com.e_learning_platform.enrolment_service.dto.EnrolmentDTOResponse;
 import com.e_learning_platform.enrolment_service.dto.UserDto;
 import com.e_learning_platform.enrolment_service.entity.Enrolment;
 import com.e_learning_platform.enrolment_service.repository.EnrolmentRepo;
@@ -9,11 +10,10 @@ import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 
-import java.util.Optional;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -85,7 +85,44 @@ public class EnrolmentService {
         enrolment.setCourseId(courseId);
         enrolment.setUserId(userId);
         enrolment.setStatus("Enrolled");
+        enrolment.setProgressPercentage(0.0);
         return enrolmentRepo.save(enrolment);
     }
+
+    public List<EnrolmentDTOResponse> getEnrolmentHistory(Long userId, String token) {
+        UserDto userDto = getUserById(userId, token);
+        if(userDto == null){
+            throw new IllegalArgumentException("User not found with user id: " + userId);
+        }
+
+        // fetch only this user's enrolments
+        List<Enrolment> enrolments = enrolmentRepo.findByUserId(userId);
+
+        List<EnrolmentDTOResponse> dtoResponses = new ArrayList<>();
+
+        for (Enrolment enrolment : enrolments) {
+
+            // Fetch course details ONLY ONCE
+            CourseDto courseDto = getCourseById(enrolment.getCourseId(), token);
+
+            EnrolmentDTOResponse response = new EnrolmentDTOResponse();
+            response.setEnrolmentId(enrolment.getEnrollmentId());
+            response.setUserId(userId);
+            response.setUsername(userDto.getUsername());
+            response.setEnrolmentDate(enrolment.getEnrolledAt());
+            response.setStatus(enrolment.getStatus());
+            response.setProgressPercentage(enrolment.getProgressPercentage());  // if exists
+
+            // set course details
+            response.setCourseId(enrolment.getCourseId());
+            response.setTitle(courseDto.getTitle());
+            response.setDescription(courseDto.getDescription());
+
+            dtoResponses.add(response);
+        }
+
+        return dtoResponses;
+    }
+
 
 }
