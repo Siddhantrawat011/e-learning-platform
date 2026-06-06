@@ -12,7 +12,7 @@ Planned future integration of AI for personalized learning recommendations and q
 - ReactJS frontend with state management
 - Database management using Hibernate
 - AI-powered recommendations (planned)
-
+    
 ## Tech Stack
 **Frontend:** ReactJS, JavaScript, HTML, CSS  
 **Backend:** Java Spring Boot, Spring Security, REST APIs, Hibernate, JPA  

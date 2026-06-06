@@ -2,6 +2,8 @@ package com.e_learning_platform.appuser_service.entity;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,9 +29,11 @@ public class AppUser implements UserDetails {
     private long id;
 
     @Column
+    @NotNull
     private String username;
 
     @Column
+    @Email
     private String email;
 
     @Column
