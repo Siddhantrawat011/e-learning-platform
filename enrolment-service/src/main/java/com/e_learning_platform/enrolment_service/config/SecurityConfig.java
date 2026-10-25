@@ -2,7 +2,6 @@ package com.e_learning_platform.enrolment_service.config;
 
 import com.e_learning_platform.enrolment_service.jwt.JwtFilter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;

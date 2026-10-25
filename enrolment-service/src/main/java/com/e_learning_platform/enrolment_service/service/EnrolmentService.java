@@ -5,7 +5,6 @@ import com.e_learning_platform.enrolment_service.dto.EnrolmentDTOResponse;
 import com.e_learning_platform.enrolment_service.dto.UserDto;
 import com.e_learning_platform.enrolment_service.entity.Enrolment;
 import com.e_learning_platform.enrolment_service.repository.EnrolmentRepo;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Value;
@@ -63,7 +62,7 @@ public class EnrolmentService {
         }
     }
 
-    public @Nullable Enrolment enrolInCourse(@NonNull Long userId, @NonNull Long courseId, String token) {
+    public @Nullable Enrolment enrolInCourse(Long userId, Long courseId, String token) {
         UserDto userDto = getUserById(userId, token);
         CourseDto courseDto = getCourseById(courseId, token);
         if(userDto == null){
@@ -73,18 +72,13 @@ public class EnrolmentService {
             throw new IllegalArgumentException("Course not found with course id: " + courseId);
         }
 
-        // optionally check duplicates
-        Optional<Enrolment> existing = enrolmentRepo.findAll()
-                .stream().filter(e -> e.getCourseId().equals(courseId) && e.getUserId().equals(userId))
-                .findFirst();
-        if(existing.isPresent()){
-            return existing.get();
+        if(enrolmentRepo.existsByUserIdAndCourseId(userId, courseId)){
+            throw new IllegalArgumentException("You are already enrolled in this course!");
         }
 
         Enrolment enrolment = new Enrolment();
         enrolment.setCourseId(courseId);
         enrolment.setUserId(userId);
-        enrolment.setStatus("Enrolled");
         enrolment.setProgressPercentage(0.0);
         return enrolmentRepo.save(enrolment);
     }
@@ -110,7 +104,6 @@ public class EnrolmentService {
             response.setUserId(userId);
             response.setUsername(userDto.getUsername());
             response.setEnrolmentDate(enrolment.getEnrolledAt());
-            response.setStatus(enrolment.getStatus());
             response.setProgressPercentage(enrolment.getProgressPercentage());  // if exists
 
             // set course details
@@ -120,9 +113,10 @@ public class EnrolmentService {
 
             dtoResponses.add(response);
         }
-
         return dtoResponses;
     }
 
-
+    public boolean checkIfEnrolled(Long userId, Long courseId) {
+        return enrolmentRepo.existsByUserIdAndCourseId(userId, courseId);
+    }
 }

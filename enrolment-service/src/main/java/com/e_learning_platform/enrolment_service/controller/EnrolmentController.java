@@ -19,8 +19,8 @@ public class EnrolmentController {
 
     @PostMapping("/{userId}/{courseId}")
     public ResponseEntity<Enrolment> enrolInCourse(@RequestHeader("Authorization") String token,
-                                                   @PathVariable("userId") @NonNull Long userId,
-                                                   @PathVariable("courseId")  @NonNull Long courseId){
+                                                   @PathVariable("userId") Long userId,
+                                                   @PathVariable("courseId") Long courseId){
         System.out.println("UserId=" + userId + ", CourseID=" + courseId);
         return ResponseEntity.ok(enrolmentService.enrolInCourse(userId, courseId, token));
     }
@@ -30,5 +30,11 @@ public class EnrolmentController {
                                                                           @PathVariable Long userId){
         List<EnrolmentDTOResponse> enrolments = enrolmentService.getEnrolmentHistory(userId, token);
         return ResponseEntity.ok(enrolments);
+    }
+
+    @GetMapping("/user/check/{userId}/{courseId}")
+    public ResponseEntity<Boolean> checkIfEnrolled(@PathVariable Long userId, @PathVariable Long courseId){
+        boolean isEnrolled = enrolmentService.checkIfEnrolled(userId, courseId);
+        return ResponseEntity.ok(isEnrolled);
     }
 }

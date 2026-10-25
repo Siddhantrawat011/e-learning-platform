@@ -26,7 +26,7 @@ public class AppUser implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private long id;
+    private long userId;
 
     @Column
     @NotNull
